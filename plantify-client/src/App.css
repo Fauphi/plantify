@@ -1,22 +1,40 @@
+html,
+body {
+    background-color: #f6fafd;
+    color: #383838;
+}
+
 .App {
-  text-align: center;
+    text-align: left;
+    padding: 0px;
+    font-family: "Work Sans", sans-serif;
+    background-color: #f6fafd;
 }
 
-.App-logo {
-  height: 40vmin;
+.App h1 {
+    font-family: "Baskervville", serif;
+    font-weight: 600;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App h2 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 1em;
 }
 
-.App-link {
-  color: #09d3ac;
+.scroll-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-wrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+.scroll-wrapper::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: transparent;
 }
