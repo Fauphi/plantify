@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Dashboard from "./components/Dashboard/Dashboard.js";
+import Dashboard from "./components/Dashboard/Dashboard";
+import Popup from "./components/Popup/Popup";
 
 function App() {
+    const [popupStatus, setPopupStatus] = useState(false);
+
     return (
         <div className="App">
-            <Dashboard />
+            <Dashboard popupFn={setPopupStatus} />
+            <Popup status={popupStatus} popupFn={setPopupStatus}>
+                <Dashboard popupFn={setPopupStatus} />
+            </Popup>
             {/* <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>

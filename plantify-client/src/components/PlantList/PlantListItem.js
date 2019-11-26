@@ -13,6 +13,9 @@ export default function PlantListItem(props) {
                 boxShadow:
                     "0 1px 10px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)"
             }}
+            onClick={() => {
+                props.popupFn(true);
+            }}
         >
             <div className="top">
                 <img width="200px" src={props.image} />

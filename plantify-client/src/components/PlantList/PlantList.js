@@ -2,7 +2,7 @@ import React from "react";
 
 import PlantListItem from "./PlantListItem";
 
-export default function PlantList() {
+export default function PlantList(props) {
     const plants = [
         {
             image:
@@ -22,14 +22,14 @@ export default function PlantList() {
     ];
 
     return (
-        <div style={{ "max-width": "100%", overflow: "hidden" }}>
+        <div style={{ maxWidth: "100%", overflow: "hidden" }}>
             <div
                 className="scroll-wrapper"
                 style={{
                     width: "100%",
-                    "overflow-y": "hidden",
-                    "overflow-x": "scroll",
-                    "-webkit-overflow-scrolling": "touch"
+                    overflowY: "hidden",
+                    overflowX: "scroll",
+                    WebkitOverflowScrolling: "touch"
                 }}
             >
                 <div
@@ -37,7 +37,12 @@ export default function PlantList() {
                     style={{ width: plants.length * 220, paddingRight: 20 }}
                 >
                     {plants.map(plant => (
-                        <PlantListItem name={plant.name} image={plant.image} />
+                        <PlantListItem
+                            key={plant.name}
+                            name={plant.name}
+                            image={plant.image}
+                            popupFn={props.popupFn}
+                        />
                     ))}
                 </div>
             </div>
